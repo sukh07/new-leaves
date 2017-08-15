@@ -1,0 +1,91 @@
+﻿@model Week04.Models.Publisher
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Publisher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.companyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.companyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contactFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contactFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contctSName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contctSName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pubStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pubStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.putSuburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.putSuburb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pubState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pubState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pubPC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pubPC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PubID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,97 @@
+﻿@model Week04.Models.Publisher
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Publisher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.companyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.companyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contactFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contactFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contctSName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contctSName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pubStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pubStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.putSuburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.putSuburb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pubState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pubState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pubPC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pubPC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

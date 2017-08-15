@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Week04.Models.Publisher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.companyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contactFName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contctSName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pubStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.putSuburb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pubState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pubPC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.companyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactFName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contctSName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pubStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.putSuburb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pubState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pubPC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PubID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PubID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PubID })
+        </td>
+    </tr>
+}
+
+</table>
